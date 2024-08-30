@@ -1,12 +1,42 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 
+import { Metadata } from 'next';
+import '@/styles/globals.css';
+import Layout from "@/components/common/layout";
+import { useEffect } from "react";
+import Lenis from "lenis";
+import { AnimatePresence } from "framer-motion";
+
+export const metadata: Metadata = {
+  title: 'Sahith Portfolio',
+  description: 'Made with love by Sahith',
+  icons: {
+    icon: '/favicon.png',
+  },
+};
+
 const App: React.FC<AppProps> = (props: AppProps) => {
-  
-  const { Component, pageProps } = props;
+
+  const { Component, pageProps, router } = props;
+
+  useEffect(() => {
+    const lenis = new Lenis()
+
+    const raf = (time: number) => {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+  })
 
   return (
-    <Component {...pageProps} />
+    <Layout>
+      <AnimatePresence mode="wait">
+        <Component key={router.route} {...pageProps} />
+      </AnimatePresence>
+    </Layout>
   );
 }
 

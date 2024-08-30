@@ -1,8 +1,11 @@
+import PageTransition from '@/components/common/pageTransition'
 import React from 'react'
 
 const About: React.FC = () => {
   return (
-    <div>About</div>
+    <PageTransition>
+      About
+    </PageTransition>
   )
 }
 
