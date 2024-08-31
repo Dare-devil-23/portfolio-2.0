@@ -13,7 +13,7 @@ const Descriptions: React.FC<Props> = ({ data, selectedProject }) => {
     }
 
     return (
-        <div className="absolute top-[3px] h-full w-full z-[2] pointer-events-none">
+        <div className="absolute top-[3px] h-full w-full z-[3] pointer-events-none">
             {
                 data.map((project, i) => {
                     const { title, description } = project;
@@ -26,7 +26,7 @@ const Descriptions: React.FC<Props> = ({ data, selectedProject }) => {
                                 transition: "clip-path .4s"
                             }}
                         >
-                            <p className='text-[#010101] uppercase font-bold text-[6vw] leading-[6.5vw] m-0 relative z-[1]'>
+                            <p className='text-[#010101] uppercase font-bold text-[6vw] leading-[6.5vw] m-0 relative z-[2]'>
                                 {crop(title, 9)}
                             </p>
                             <p className='w-[40%] text-[1vw] font-bold'>

@@ -14,7 +14,7 @@ const HomeSection: React.FC = () => {
     const y = useTransform(scrollYProgress, [0, 1], [0, 200]);
     
     return (
-        <div ref={container} className='min-h-[100dvh] p-5 md:p-0'>
+        <div ref={container} className='min-h-[60dvh] lg:min-h-[100dvh] p-5 md:p-0'>
             <div className='flex flex-col md:flex-row'>
                 <motion.div style={{ y }} className='flex -mt-[80px] mb-[80px] gap-x-3 max-w-[90dvw] md:pl-[10dvw] flex-wrap md:[&>*:nth-child(1)]:pl-[10dvw] mix-blend-difference'>
                     {
