@@ -9,7 +9,7 @@ type Props = {
 const Image: React.FC<Props> = (props: Props) => {
     const { selectedImage } = props;    
     return (
-        <div className='absolute w-full h-full z-[1] hidden md:block'>
+        <div className='absolute w-full h-full z-[1] hidden lg:block'>
             <Canvas>
                 <ImageMesh activeMenu={selectedImage} />
             </Canvas>

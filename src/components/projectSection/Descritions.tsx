@@ -26,10 +26,13 @@ const Descriptions: React.FC<Props> = ({ data, selectedProject }) => {
                                 transition: "clip-path .4s"
                             }}
                         >
-                            <p className='text-[#010101] uppercase font-bold text-[6vw] leading-[6.5vw] m-0 relative z-[2]'>
+                            <p className='text-zinc-800 hidden lg:block uppercase project-title-font-size m-0 relative z-[2]'>
                                 {crop(title, 9)}
                             </p>
-                            <p className='w-[40%] text-[1vw] font-bold'>
+                            <p className='text-zinc-800 lg:hidden block uppercase project-title-font-size m-0 relative z-[2]'>
+                                {crop(title, 4)}
+                            </p>
+                            <p className='w-[60%] lg:w-[40%] text-[1vh] lg:text-[1vw] font-bold'>
                                 {description}
                             </p>
                         </div>

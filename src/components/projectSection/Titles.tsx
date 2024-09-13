@@ -43,11 +43,11 @@ const Title: React.FC<TitleProps> = (props: TitleProps) => {
             >
                 <motion.p
                     style={{ clipPath: clip }}
-                    className='inline-block text-zinc-300 uppercase font-bold text-[6vw] leading-[6.5vw] m-0 relative z-[3]'
+                    className='inline-block text-zinc-300 uppercase project-title-font-size m-0 relative z-[3]'
                 >
                     {title}
                 </motion.p>
-                <p className='text-zinc-800 top-0 z-[2] uppercase font-bold text-[6vw] leading-[6.5vw] m-0 block absolute'>
+                <p className='text-zinc-800 mix-blend-difference top-0 z-[2] uppercase project-title-font-size m-0 block absolute'>
                     {title}
                 </p>
             </div>

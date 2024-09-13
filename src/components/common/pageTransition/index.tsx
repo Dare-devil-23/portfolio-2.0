@@ -74,7 +74,7 @@ const PageTransition: React.FC<Props> = (props: Props) => {
     }, [])
 
     return (
-        <div className=''>
+        <div>
             <div style={{ opacity: dimensions.width === 0 ? 1 : 0 }} className='bg-black w-[100dvw] h-[calc(100dvh+600px)] top-[-300px] left-0 fixed pointer-events-none' />
             <motion.p className='absolute left-[50%] top-[40%] text-white text-[46px] z-50 -translate-x-[50%] text-center' {...anim(text)}>
                 {routes[router.route as keyof typeof routes]}

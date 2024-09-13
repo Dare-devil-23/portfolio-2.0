@@ -1,10 +1,10 @@
 export const projectsData = [
     {
-        title: "CyberInfo",
-        description: "CYBERINFO Focal point is unlock a client remarkable application which has high potential with ease and perfect adaptability.",
+        title: "TekieHub",
+        description: "IT Consulting services and web development.",
         speed: 0.5,
-        imgSrc: '/projects/cyberinfo.png',
-        link: "https://cyberinfo.com"
+        imgSrc: '/projects/tekiehub.png',
+        link: "https://tekiehub.com/"
     },
     {
         title: "DizzyFit",
@@ -29,7 +29,7 @@ export const projectsData = [
     },
     {
         title: "DResults",
-        description: "Decentralized Results is a exam results platform that utilizes blockchain technology.",
+        description: "Exam results platform that utilizes blockchain technology.",
         speed: 0.8,
         imgSrc: '/projects/dresults.png',
         link: "https://noisy-cherry-4156.on.fleek.co"

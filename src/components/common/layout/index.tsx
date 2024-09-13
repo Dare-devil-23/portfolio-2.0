@@ -16,7 +16,7 @@ const Layout: React.FC<LayoutProps> = (props: LayoutProps) => {
         <main>
             <NavBar ref={stickyElement} />
             <StickyCursor stickyElement={stickyElement} />
-            <section className='min-h-[100dvh] pt-[60px] md:pt-[110px] bg-white'>
+            <section className='min-h-[100dvh] pt-[60px] lg:pt-[110px] bg-white'>
                 {children}
             </section>
             <Footer />

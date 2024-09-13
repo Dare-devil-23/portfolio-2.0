@@ -10,15 +10,15 @@ interface Props {
 
 const NavBar: React.FC<Props> = forwardRef((props, ref) => {
   return (
-    <div className='fixed box-border top-0 left-0 w-full h-[60px] z-50 md:h-[110px] mix-blend-difference'>
-      <div className='w-full h-full px-5 md:px-20 font-roboto flex justify-between items-center'>
-        <Link href='/' className='text-[24px] font-semibold font-sans tracking-wide text-zinc-300'>
+    <div className='fixed box-border top-0 left-0 w-full h-[8dvh] z-50 lg:h-[10dvh] mix-blend-difference'>
+      <div className='w-full h-full px-5 lg:px-20 font-roboto flex justify-between items-center'>
+        <Link href='/' className='text-[3dvh] font-semibold font-sans tracking-wide text-zinc-300'>
           <Magnetic>
               Sahith
             <div ref={ref as any} className='absolute w-full h-full left-0 top-0 hover:scale-[3]' />
           </Magnetic>
         </Link>
-        <div className='md:flex gap-6 items-center justify-around hidden'>
+        <div className='lg:flex gap-6 items-center justify-around hidden'>
           {
             navLinks.map((item, index) => {
               return (
@@ -31,7 +31,7 @@ const NavBar: React.FC<Props> = forwardRef((props, ref) => {
             })
           }
         </div>
-        <div className='block md:hidden' />
+        <div className='block lg:hidden' />
       </div>
     </div>
   )
