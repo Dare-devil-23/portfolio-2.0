@@ -17,7 +17,7 @@ const EartMesh: React.FC<{ scrollYProgress: MotionValue }> = ({ scrollYProgress 
             fallback={<img className='h-full' src="/images/earth.png" />}
         >
             <ambientLight intensity={0.3} />
-            <directionalLight intensity={5} position={[1, 0, 0.5]} />
+            <directionalLight intensity={5} position={[1, 0, 0.9]} />
             <motion.mesh
                 scale={2.5}
                 rotation-y={scrollYProgress}

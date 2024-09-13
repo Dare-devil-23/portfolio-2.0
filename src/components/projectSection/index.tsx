@@ -8,7 +8,7 @@ const ProjectSection: React.FC = () => {
 
     return (
         <section className='lg:my-[10dvh] my-0'>
-            <div className='lg:h-[100dvh] relative flex items-center justify-center'>
+            <div className='h-[100dvh] relative flex items-center justify-center'>
                 <Earth />
                 <Projects setSelectedImage={setSelectedImage} />
                 <Image selectedImage={selectedImage} />

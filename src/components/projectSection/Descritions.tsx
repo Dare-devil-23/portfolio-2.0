@@ -20,16 +20,16 @@ const Descriptions: React.FC<Props> = ({ data, selectedProject }) => {
                     return (
                         <div
                             key={i}
-                            className="bg-zinc-300 flex justify-between items-center px-[10%]"
+                            className="bg-zinc-800 text-zinc-300 flex justify-between items-center px-[10%]"
                             style={{ 
                                 clipPath: selectedProject == i ? "inset(0 0 0)" : "inset(50% 0 50%)",
                                 transition: "clip-path .4s"
                             }}
                         >
-                            <p className='text-zinc-800 hidden lg:block uppercase project-title-font-size m-0 relative z-[2]'>
+                            <p className='hidden lg:block uppercase project-title-font-size m-0 relative z-[2]'>
                                 {crop(title, 9)}
                             </p>
-                            <p className='text-zinc-800 lg:hidden block uppercase project-title-font-size m-0 relative z-[2]'>
+                            <p className='lg:hidden block uppercase project-title-font-size m-0 relative z-[2]'>
                                 {crop(title, 4)}
                             </p>
                             <p className='w-[60%] lg:w-[40%] text-[1vh] lg:text-[1vw] font-bold'>
