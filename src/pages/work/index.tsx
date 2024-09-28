@@ -4,7 +4,7 @@ import React from 'react'
 const Work: React.FC = () => {
   return (
     <PageTransition>
-      work
+      <div>work</div>
     </PageTransition>
   )
 }

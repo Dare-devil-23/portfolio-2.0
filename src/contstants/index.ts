@@ -1,8 +1,8 @@
 export const navLinks = [
-    {
-        title: 'Work',
-        path: '/work'
-    },
+    // {
+    //     title: 'Work',
+    //     path: '/work'
+    // },
     {
         title: 'About',
         path: '/about'
