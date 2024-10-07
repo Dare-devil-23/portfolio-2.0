@@ -1,9 +1,13 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { useTransform, useScroll, motion, useAnimation } from 'framer-motion';
 
-const heroPhrase = "a front end  developer  who loves  design";
+interface Props {
+    heroPhrase: string;
+}
 
-const HomeSection: React.FC = () => {
+const HomeSection: React.FC<Props> = (props: Props) => {
+
+    const { heroPhrase } = props;
     const container = useRef(null);
     const controls = useAnimation();
     const [isTransitionComplete, setIsTransitionComplete] = useState(false);

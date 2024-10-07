@@ -13,11 +13,21 @@ const Layout: React.FC<LayoutProps> = (props: LayoutProps) => {
     const router = useRouter();
     const stickyElement = useRef<HTMLDivElement | null>(null);
 
+    const getBg = () => {
+        if(router.pathname === '/contact') {
+            return 'bg-black';
+        } else if(router.pathname === '/about') {
+            return 'bg-[#222]';
+        }
+
+        return 'bg-white';
+    }
+
     return (
         <main>
             <NavBar ref={stickyElement} />
             <StickyCursor stickyElement={stickyElement} />
-            <section className={`min-h-[100dvh] pt-[60px] lg:pt-[110px] ${router.route === "/contact" ? "bg-black" :"bg-white"} transition-colors delay-[2s] duration-700`}>
+            <section className={`min-h-[100dvh] pt-[60px] lg:pt-[110px] ${getBg()} transition-colors delay-[2s] duration-700`}>
                 {children}
             </section>
             <Footer />

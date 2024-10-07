@@ -6,7 +6,7 @@ import ProjectSection from '@/components/projectSection';
 const Home: React.FC = () => {
   return (
     <PageTransition>
-      <HomeSection />
+      <HomeSection heroPhrase="a front end  developer  who loves  design"/>
       <ProjectSection />
     </PageTransition>
   )
