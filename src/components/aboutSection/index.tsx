@@ -36,12 +36,12 @@ const AboutSection: React.FC = () => {
 
     return (
         <>
-            <div className='bg-black/30 backdrop-blur-xl text-white/80 px-10 py-[15dvh]'>
+            <div className='bg-black/30 backdrop-blur-xl text-white/80 px-10 py-[10dvh]  lg:py-[15dvh]'>
                 <div className='flex justify-between gap-5 lg:px-10 py-14 flex-col lg:flex-row border-t border-t-zinc-500'>
                     <div className='uppercase text-3xl pb-5 lg:pb-0'>
                         Profesionally
                     </div>
-                    <div className='lg:max-w-[50%] text-2xl lg:text-4xl leading-[50px]'>
+                    <div className='lg:max-w-[50%] text-2xl lg:text-4xl leading-[42px] lg:leading-[70px]'>
                         &emsp;&emsp;&emsp;As a front-end developer, I love to be creative with code,
                         putting a lot of effort into making interactions as
                         smooth as they can be. Over the last 2 years,
@@ -53,7 +53,7 @@ const AboutSection: React.FC = () => {
                     <div className='uppercase text-3xl pb-5 lg:pb-0'>
                         Personally
                     </div>
-                    <div className='lg:max-w-[50%] text-2xl lg:text-4xl leading-[50px]'>
+                    <div className='lg:max-w-[50%] text-2xl lg:text-4xl leading-[42px] lg:leading-[70px]'>
                         &emsp;&emsp;&emsp;Besides being a front-end developer,
                         I like to play video games, hit the gym, 
                         or continue my journey to cover the world. 
@@ -65,38 +65,38 @@ const AboutSection: React.FC = () => {
                         My journey
                     </div>
                     <div className='lg:max-w-[50%] text-2xl lg:text-4xl leading-[40px] flex flex-col gap-10'>
-                        <div className='flex gap-10 justify-between border-t border-t-zinc-500 pt-5'>
+                        <div className='flex lg:gap-10 gap-1 lg:flex-row flex-col justify-between border-t border-t-zinc-500 pt-5'>
                             <div>
                                 Full Stack Developer at FC.ONE
                             </div>
-                            <div className='text-lg self-end'>
+                            <div className='text-sm whitespace-nowrap lg:text-lg self-end'>
                                 2023 - now
                             </div>
                         </div>
 
-                        <div className='flex gap-10 justify-between border-t border-t-zinc-500 pt-5'>
+                        <div className='flex lg:gap-10 gap-1 lg:flex-row flex-col justify-between border-t border-t-zinc-500 pt-5'>
                             <div>
                                 Associate Software Developer at PromptCloud
                             </div>
-                            <div className='text-lg self-end'>
+                            <div className='text-sm whitespace-nowrap lg:text-lg self-end'>
                                 2022 - 2023
                             </div>
                         </div>
 
-                        <div className='flex gap-10 justify-between border-t border-t-zinc-500 pt-5'>
+                        <div className='flex lg:gap-10 gap-1 lg:flex-row flex-col justify-between border-t border-t-zinc-500 pt-5'>
                             <div>
                                 B.Tech Computer Science
                             </div>
-                            <div className='text-lg self-end'>
+                            <div className='text-sm whitespace-nowrap lg:text-lg self-end'>
                                 2019 - 2023
                             </div>
                         </div>
 
-                        <div className='flex gap-10 justify-between border-t border-t-zinc-500 pt-5'>
+                        <div className='flex lg:gap-10 gap-1 lg:flex-row flex-col justify-between border-t border-t-zinc-500 pt-5'>
                             <div>
                                 Pre university
                             </div>
-                            <div className='text-lg self-end'>
+                            <div className='text-sm whitespace-nowrap lg:text-lg self-end'>
                                 2017 - 2019
                             </div>
                         </div>

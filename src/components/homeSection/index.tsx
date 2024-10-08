@@ -54,7 +54,7 @@ const HomeSection: React.FC<Props> = (props: Props) => {
             <div className='flex flex-col lg:flex-row w-full'>
                 <motion.div
                     style={{ y }}
-                    className={`flex ${staticBg ? "-mt-[50dvh]" : "-mt-[10dvh]"} mb-[20dvh] lg:mb-10 lg:-mt-[8dvh] gap-x-3 max-w-[90dvw] lg:pl-[10dvw] justify-center mix-blend-difference`}
+                    className={`flex ${staticBg ? "-mt-[42dvh]" : "-mt-[10dvh]"} mb-[20dvh] lg:mb-10 lg:-mt-[8dvh] gap-x-3 max-w-[90dvw] lg:pl-[10dvw] justify-center mix-blend-difference`}
                     variants={containerVariants}
                     initial="hidden"
                     animate={isTransitionComplete ? "visible" : "hidden"}
@@ -78,7 +78,7 @@ const HomeSection: React.FC<Props> = (props: Props) => {
                                 bottom: 5,
                                 mixBlendMode: 'difference'
                             }}
-                            className='bg-gray-300 rounded-[36px] lg:rounded-r-[0px] right-0 mt-[25dvh] mx-5 max-w-3xl lg:mx-0 xl:w-[50dvw] xl:h-[70dvh] z-0'
+                            className='bg-gray-300 rounded-[36px] lg:rounded-r-[0px] right-0 mt-[25dvh] mx-5 max-w-3xl lg:max-w-none lg:mx-0 xl:w-[50dvw] xl:h-[70dvh] z-0'
                         >
                             <img
                                 src="/images/sahith-bg.webp"

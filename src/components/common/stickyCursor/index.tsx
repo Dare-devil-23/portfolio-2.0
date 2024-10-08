@@ -98,7 +98,7 @@ const StickyCursor: React.FC<Props> = (props: Props) => {
                 width: cursorSize,
                 height: cursorSize
             }}
-            className="fixed hidden z-10 lg:block w-[20px] h-[20px] bg-zinc-800 rounded-full pointer-events-none"
+            className="fixed hidden z-0 mix-blend-luminosity lg:block w-[20px] h-[20px] bg-gray-400 rounded-full pointer-events-none"
             ref={cursor}>
         </motion.div>
     )
