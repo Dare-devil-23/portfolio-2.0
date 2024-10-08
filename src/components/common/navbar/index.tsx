@@ -18,7 +18,7 @@ const NavBar: React.FC<Props> = forwardRef((props, ref) => {
             <div ref={ref as any} className='absolute w-full h-full left-0 top-0 hover:scale-[3]' />
           </Magnetic>
         </Link>
-        <div className='lg:flex gap-6 items-center justify-around hidden'>
+        <div className='flex gap-6 items-center lg:justify-around justify-end'>
           {
             navLinks.map((item, index) => {
               return (
@@ -31,7 +31,6 @@ const NavBar: React.FC<Props> = forwardRef((props, ref) => {
             })
           }
         </div>
-        <div className='block lg:hidden' />
       </div>
     </div>
   )

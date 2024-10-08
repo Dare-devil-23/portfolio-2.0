@@ -24,7 +24,7 @@ const anim = (variants: Record<string, Object>) => {
     }
 }
 
-const SVG: React.FC<{ height: number, width: number }> = ({ height, width }: { height: number, width: number }) => {
+const SVG: React.FC<{ height: number, width: number }> = React.memo(({ height, width }: { height: number, width: number }) => {
 
     const initialPath = `
         M0 300 
@@ -43,11 +43,11 @@ const SVG: React.FC<{ height: number, width: number }> = ({ height, width }: { h
     `
 
     return (
-        <motion.svg fill="#18181b" className="w-[100dvw] h-[calc(100vh+600px)] top-[-300px] z-40 left-0 fixed pointer-events-none" {...anim(translate)}>
+        <motion.svg style={{ willChange: 'transform' }}  fill="#3d3d3d" className="w-[100dvw] h-[calc(100vh+600px)] top-[-300px] z-40 left-0 fixed pointer-events-none" {...anim(translate)}>
             <motion.path {...anim(curve(initialPath, targetPath))} />
         </motion.svg>
     )
-}
+})
 
 const PageTransition: React.FC<Props> = (props: Props) => {
 
