@@ -36,7 +36,7 @@ const AboutSection: React.FC = () => {
 
     return (
         <>
-            <div className='bg-black/30 backdrop-blur-xl text-white/80 px-10 py-[10dvh]  lg:py-[15dvh]'>
+            <div className='bg-black/30 backdrop-blur-xl text-white/80 px-10 py-[10vh]  lg:py-[15vh]'>
                 <div className='flex justify-between gap-5 lg:px-10 py-14 flex-col lg:flex-row border-t border-t-zinc-500'>
                     <div className='uppercase text-3xl pb-5 lg:pb-0'>
                         Profesionally

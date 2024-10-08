@@ -34,7 +34,7 @@ const Contact: React.FC = () => {
             }
           </div>
         </div>
-        <div className='mt-10 text-[2dvh] lg:text-[4dvw]'>
+        <div className='mt-10 text-[2vh] lg:text-[4dvw]'>
           <a href='mailto:sahith.sahi9866@gmail.com' className='py-14 border-b border-zinc-700 flex items-center justify-between'>
             <div>
               Email

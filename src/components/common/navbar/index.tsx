@@ -10,9 +10,9 @@ interface Props {
 
 const NavBar: React.FC<Props> = forwardRef((props, ref) => {
   return (
-    <div className='fixed box-border top-0 left-0 w-full h-[8dvh] z-50 lg:h-[10dvh] mix-blend-difference'>
+    <div className='fixed box-border top-0 left-0 w-full h-[8vh] z-50 lg:h-[10vh] mix-blend-difference'>
       <div className='w-full h-full px-5 lg:px-20 font-roboto flex justify-between items-center'>
-        <Link href='/' className='text-[3dvh] font-semibold font-sans tracking-wide text-zinc-300'>
+        <Link href='/' className='text-[3vh] font-semibold font-sans tracking-wide text-zinc-300'>
           <Magnetic>
               Sahith
             <div ref={ref as any} className='absolute w-full h-full left-0 top-0 hover:scale-[3]' />
