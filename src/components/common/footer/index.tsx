@@ -25,8 +25,8 @@ const Footer: React.FC = () => {
         <div className='sticky top-[calc(100vh-600px)] lg:top-[calc(100vh-470px)] h-[600px] lg:h-[470px]'>
           <div className='px-5 py-8 bg-zinc-900 h-full'>
             <div className='flex gap-10 flex-col lg:flex-row'>
-              <div className='w-full h-auto lg:w-[400px] rounded-xl bg-zinc-300'>
-                <img src="/images/sahith-bg.webp" className='w-full h-full' />
+              <div className='w-full h-auto max-w-[400px] lg:w-[400px] rounded-xl bg-zinc-300'>
+                <img src="/images/sahith-bg.webp" className='w-full h-full max-w-[400px]' />
               </div>
               <div className='flex gap-8 flex-col justify-around'>
                 <div className='flex gap-3 items-start lg:items-end justify-between lg:justify-start'>

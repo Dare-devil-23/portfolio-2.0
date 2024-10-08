@@ -2,12 +2,13 @@ import React, { useRef, useEffect, useState } from 'react';
 import { useTransform, useScroll, motion, useAnimation } from 'framer-motion';
 
 interface Props {
-    heroPhrase: string;
+    heroPhrase: React.ReactNode;
+    staticBg?: boolean;
 }
 
 const HomeSection: React.FC<Props> = (props: Props) => {
 
-    const { heroPhrase } = props;
+    const { heroPhrase, staticBg = false } = props;
     const container = useRef(null);
     const controls = useAnimation();
     const [isTransitionComplete, setIsTransitionComplete] = useState(false);
@@ -49,34 +50,52 @@ const HomeSection: React.FC<Props> = (props: Props) => {
     };
 
     return (
-        <div ref={container} className='min-h-[calc(100dvh-80px)] flex lg:block items-center lg:min-h-[100dvh] p-5 lg:p-0'>
-            <div className='flex flex-col lg:flex-row'>
+        <div ref={container} id="static-bg-container" style={{ position: staticBg ? 'relative' : 'static' }} className='z-0 min-h-[100dvh] overflow-hidden flex lg:block items-center lg:min-h-[100dvh] p-5 lg:p-0'>
+            <div className='flex flex-col lg:flex-row w-full'>
                 <motion.div
                     style={{ y }}
-                    className='flex -mt-[40dvh] mb-[20dvh] lg:mb-10 lg:-mt-[8dvh] gap-x-3 max-w-[90dvw] lg:pl-[10dvw] flex-wrap lg:[&>*:nth-child(1)]:pl-[10dvw] mix-blend-difference'
+                    className={`flex ${staticBg ? "-mt-[50dvh]" : "-mt-[10dvh]"} mb-[20dvh] lg:mb-10 lg:-mt-[8dvh] gap-x-3 max-w-[90dvw] lg:pl-[10dvw] justify-center mix-blend-difference`}
                     variants={containerVariants}
                     initial="hidden"
                     animate={isTransitionComplete ? "visible" : "hidden"}
                 >
-                    {
-                        heroPhrase.split('  ').map((phrase, index) => (
-                            <motion.h1
-                                className='text-[4dvh] leading-[4dvh] lg:text-[9dvw] lg:leading-[9dvw] lg:whitespace-nowrap font-sans uppercase font-medium text-zinc-300'
-                                key={index}
-                                variants={itemVariants}
-                            >
-                                {phrase}
-                            </motion.h1>
-                        ))
-                    }
+                    <motion.h1
+                        className='text-[5dvh] leading-[5dvh] lg:text-[9dvw] lg:leading-[9dvw] lg:whitespace-nowrap font-sans uppercase font-medium text-zinc-300'
+                        variants={itemVariants}
+                    >
+                        {heroPhrase}
+                    </motion.h1>
                 </motion.div>
-                <div className='bg-gray-300 rounded-[36px] lg:rounded-r-[0px] flex items-end self-end lg:-ml-[45vw] -mb-[25dvh]'>
-                    <img
-                        src="/images/sahith-bg.webp"
-                        alt='sahith'
-                        className='object-cover px-[8dvw] pt-[10dvh]'
-                    />
-                </div>
+                {
+                    staticBg ? (
+                        <motion.div
+                            initial={{ opacity: 0, y: 100 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 1.5, duration: 0.5 }}
+                            id='static-bg'
+                            style={{
+                                position: 'fixed',
+                                bottom: 5,
+                                mixBlendMode: 'difference'
+                            }}
+                            className='bg-gray-300 rounded-[36px] lg:rounded-r-[0px] right-0 mt-[25dvh] mx-5 max-w-3xl lg:mx-0 xl:w-[50dvw] xl:h-[70dvh] z-0'
+                        >
+                            <img
+                                src="/images/sahith-bg.webp"
+                                alt='sahith'
+                                className='object-cover px-[7dvw] h-full'
+                            />
+                        </motion.div>
+                    ) : (
+                        <div className='bg-gray-300 rounded-[36px] lg:rounded-r-[0px] flex items-end self-end lg:-ml-[38vw] lg:mt-[25dvh]'>
+                            <img
+                                src="/images/sahith-bg.webp"
+                                alt='sahith'
+                                className='object-cover px-[8dvw] pt-[10dvh]'
+                            />
+                        </div>
+                    )
+                }
             </div>
         </div>
     );
