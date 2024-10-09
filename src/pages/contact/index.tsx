@@ -1,4 +1,5 @@
 'use client'
+import FlowText from '@/components/common/flowText'
 import PageTransition from '@/components/common/pageTransition'
 import { RightArrow } from '@/icon'
 import React from 'react'
@@ -52,6 +53,9 @@ const Contact: React.FC = () => {
             </div>
           </a>
         </div>
+      </div>
+      <div className='lg:mt-20 py-10'>
+        <FlowText text="Front End Developer" />
       </div>
     </PageTransition>
   )

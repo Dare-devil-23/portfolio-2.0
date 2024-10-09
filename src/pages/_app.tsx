@@ -1,12 +1,11 @@
-import "@/styles/globals.css";
 import type { AppProps } from "next/app";
-
 import { Metadata } from 'next';
-import '@/styles/globals.css';
 import Layout from "@/components/common/layout";
 import { useEffect } from "react";
 import Lenis from "lenis";
 import { AnimatePresence } from "framer-motion";
+import "@/styles/globals.css";
+import "@/styles/404.css";
 
 export const metadata: Metadata = {
   title: 'Sahith Portfolio',
