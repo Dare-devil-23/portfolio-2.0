@@ -5,18 +5,16 @@ import { projectsData } from '@/components/projectSection/data'
 interface TitleProps {
     data: typeof projectsData[0],
     setSelectedProject: (index: number | null) => void,
-    setSelectedImage: (index: number | null) => void
     index: number
 }
 
 interface Props {
     data: typeof projectsData,
     setSelectedProject: (index: number | null) => void,
-    setSelectedImage: (index: number | null) => void
 }
 
 const Title: React.FC<TitleProps> = (props: TitleProps) => {
-    const { data, setSelectedProject, index, setSelectedImage } = props;
+    const { data, setSelectedProject, index } = props;
 
     const { title, speed, link } = data;
     const container = useRef(null);
@@ -34,11 +32,15 @@ const Title: React.FC<TitleProps> = (props: TitleProps) => {
     }
 
     return (
-        <div ref={container} className="cursor-default relative z-[3] flex">
+        <div
+            ref={container}
+            onMouseOver={() => setSelectedProject(index)}
+            onMouseLeave={() => setSelectedProject(null)}
+            className="cursor-default relative z-[3] flex"
+        >
             <div
                 className="inline-block pl-[10%] cursor-pointer"
-                onMouseOver={() => { setSelectedProject(index) }}
-                onMouseLeave={() => { setSelectedProject(null) }}
+
                 onClick={redirectOnClick}
             >
                 <motion.p
@@ -51,18 +53,17 @@ const Title: React.FC<TitleProps> = (props: TitleProps) => {
                     {title}
                 </p>
             </div>
-            <div className='grow' onMouseOver={() => { setSelectedImage(index) }} onMouseLeave={() => { setSelectedImage(null) }} />
         </div>
     )
 }
 
 const Titles: React.FC<Props> = (props: Props) => {
-    const { data, setSelectedProject, setSelectedImage } = props;
+    const { data, setSelectedProject } = props;
     return (
         <div className="w-full">
             {
                 data.map((project, i) => {
-                    return <Title key={i} data={{ ...project }} index={i} setSelectedProject={setSelectedProject} setSelectedImage={setSelectedImage} />
+                    return <Title key={i} data={{ ...project }} index={i} setSelectedProject={setSelectedProject} />
                 })
             }
         </div>

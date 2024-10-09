@@ -3,16 +3,12 @@ import Titles from '@/components/projectSection/Titles';
 import Descriptions from '@/components/projectSection/Descritions';
 import { projectsData } from '@/components/projectSection/data';
 
-interface Props {
-    setSelectedImage: (index: number | null) => void
-}
 
-const Projects: React.FC<Props> = (props: Props) => {
-    const { setSelectedImage } = props;
+const Projects: React.FC = () => {
     const [selectedProject, setSelectedProject] = useState<number | null>(null);
     return (
         <div className="absolute z-[2] w-full">
-            <Titles data={projectsData} setSelectedProject={setSelectedProject} setSelectedImage={setSelectedImage}/>
+            <Titles data={projectsData} setSelectedProject={setSelectedProject} />
             <Descriptions data={projectsData} selectedProject={selectedProject}/>
         </div>
     )

@@ -36,4 +36,6 @@ const NavBar: React.FC<Props> = forwardRef((props, ref) => {
   )
 })
 
+NavBar.displayName = 'NavBar';
+
 export default NavBar
