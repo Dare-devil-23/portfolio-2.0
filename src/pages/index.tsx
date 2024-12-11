@@ -7,7 +7,7 @@ const Phrase: React.FC = () => {
   return (
     <>
       <span className='pl-[12dvw]'>
-        a front end
+        a full stack
       </span>
       <br /> developer
       <br /> who loves
