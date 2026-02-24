@@ -8,7 +8,7 @@ const Work: React.FC = () => {
     <PageTransition>
       <ProjectSection />
       <div className='py-10 bg-zinc-900 mt-10'>
-        <FlowText text="Frontend Engineer" />
+        <FlowText text="Interfaces With Intent" />
       </div>
     </PageTransition>
   )

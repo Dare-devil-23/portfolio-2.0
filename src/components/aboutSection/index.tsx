@@ -50,11 +50,11 @@ const AboutSection: React.FC<Props> = ({ onIntersect }) => {
                         Professionally
                     </div>
                     <div className='lg:max-w-[50%] text-2xl lg:text-4xl leading-[42px] lg:leading-[70px]'>
-                        &emsp;&emsp;&emsp;As a frontend engineer with ~3 years of experience,
-                        I build production-grade interfaces at scale. Specializing in React,
-                        Next.js, and TypeScript, I craft performant, accessible web applications —
-                        from real-time dashboards to AI-powered platforms — with tools like
-                        Framer Motion and React Three Fiber.
+                        &emsp;&emsp;&emsp;My craft lives at the intersection of engineering
+                        rigor and design sensibility. I obsess over interaction details — fluid
+                        animations, sub-second load times, components that anticipate the user.
+                        Currently shaping Web3 products, previously built AI-powered analytics
+                        and data-heavy dashboards.
                     </div>
                 </motion.div>
                 <motion.div
@@ -68,10 +68,11 @@ const AboutSection: React.FC<Props> = ({ onIntersect }) => {
                         Personally
                     </div>
                     <div className='lg:max-w-[50%] text-2xl lg:text-4xl leading-[42px] lg:leading-[70px]'>
-                        &emsp;&emsp;&emsp;Besides being a frontend engineer,
-                        I like to play video games, hit the gym,
-                        or continue my journey to cover the world.
-                        (Like to travel as much as possible)
+                        &emsp;&emsp;&emsp;When I step away from the editor,
+                        you&apos;ll find me chasing boss fights in video games,
+                        pushing limits at the gym, or mapping new corners of the globe.
+                        Driven by the same curiosity that fuels my code — an itch to explore,
+                        level up, and never stay comfortable.
                     </div>
                 </motion.div>
 

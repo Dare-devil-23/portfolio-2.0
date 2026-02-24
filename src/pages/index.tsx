@@ -9,11 +9,11 @@ const Phrase: React.FC = () => {
   return (
     <>
       <span className='pl-[12dvw]'>
-        Frontend
+        Crafting
       </span>
-      <br /> Engineer
-      <br /> who builds
-      <br /> at scale
+      <br /> digital
+      <br /> experiences
+      <br /> that resonate
     </>
   )
 }
@@ -34,7 +34,7 @@ const Home: React.FC = () => {
             href='/work'
             className='border-2 border-zinc-800 rounded-full px-8 py-4 text-lg font-medium hover:bg-zinc-900 hover:text-white transition-colors duration-300'
           >
-            View my work &rarr;
+            Explore my work &rarr;
           </Link>
         </motion.div>
       </div>

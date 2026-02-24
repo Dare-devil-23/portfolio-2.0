@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
               <div className='flex gap-8 flex-col justify-around'>
                 <div className='flex gap-3 items-start lg:items-end justify-between lg:justify-start'>
                   <div className='text-[4vh] leading-[4vh] text-white lg:text-[7dvw] lg:leading-[7dvw] uppercase'>
-                    Lets <br /> Connect
+                    Lets <br /> Talk
                   </div>
                   <motion.a whileTap={{ scale: 0.9 }} href='mailto:sahith.sahi9866@gmail.com' className='rounded-full text-[14px] px-3 py-2 bg-zinc-300 lg:px-5 lg:py-3 font-semibold'>
                     <Magnetic>
@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
                 @sahith {new Date().getFullYear()}
               </div>
               <div>
-                Made with love by me.
+                Handcrafted with obsession.
               </div>
             </div>
           </div>

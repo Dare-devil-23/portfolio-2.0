@@ -7,11 +7,11 @@ const Phrase: React.FC = () => {
   return (
     <>
       <span className='pl-[12dvw]'>
-        ~3 years
+        The mind
       </span>
-      <br /> crafting
-      <br /> production
-      <br /> frontends
+      <br /> behind
+      <br /> the
+      <br /> interfaces
     </>
   )
 }

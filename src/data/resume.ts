@@ -2,7 +2,7 @@ export const profile = {
   name: 'Sai Sahith',
   title: 'Frontend Engineer',
   summary:
-    'Frontend Engineer with ~3 years of experience building production-grade web applications. Specializing in React, Next.js, and TypeScript, I craft performant, accessible interfaces at scale — from real-time dashboards to AI-powered platforms.',
+    'I architect interfaces that feel inevitable — where complex systems dissolve into seamless user experiences. Three years deep in React, Next.js, and TypeScript, shipping everything from blockchain dashboards to AI-driven platforms.',
 };
 
 export const experience = [
@@ -11,9 +11,9 @@ export const experience = [
     company: 'Meraki Labs',
     period: 'Apr 2025 – Present',
     bullets: [
-      'Building next-generation Web3 dashboards with React and TypeScript',
-      'Architecting component libraries and design systems for cross-team adoption',
-      'Implementing real-time data visualization for blockchain analytics',
+      'Engineering next-gen Web3 dashboards with real-time blockchain data feeds',
+      'Architecting a shared component library adopted across three product teams',
+      'Pioneering interactive data visualizations for on-chain analytics',
     ],
   },
   {
@@ -21,9 +21,9 @@ export const experience = [
     company: 'Fc.one',
     period: 'Nov 2023 – Apr 2025',
     bullets: [
-      'Led frontend development of an AI-driven analytics platform using Next.js and TypeScript',
-      'Built reusable component library reducing development time by 40%',
-      'Integrated REST & WebSocket APIs for real-time collaboration features',
+      'Spearheaded the frontend of an AI analytics platform — from zero to production',
+      'Shipped a reusable component library that cut dev cycles by 40%',
+      'Wired up REST & WebSocket APIs powering live collaboration features',
     ],
   },
   {
@@ -31,9 +31,9 @@ export const experience = [
     company: 'PromptCloud',
     period: 'Sep 2022 – Nov 2023',
     bullets: [
-      'Developed customer-facing dashboards using React and Tailwind CSS',
-      'Optimized large-scale data rendering with virtualized lists and lazy loading',
-      'Collaborated with backend teams on Spring Boot microservices',
+      'Built customer-facing dashboards handling millions of data points daily',
+      'Tamed large-scale rendering with virtualized lists and lazy loading strategies',
+      'Bridged frontend and backend teams, contributing to Spring Boot microservices',
     ],
   },
 ];

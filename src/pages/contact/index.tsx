@@ -18,7 +18,7 @@ const Contact: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.5 }}
           >
-            You are just a click away
+            Let&apos;s build something remarkable
           </motion.div>
           <div className='flex gap-5 flex-wrap'>
             {
@@ -72,7 +72,7 @@ const Contact: React.FC = () => {
         </div>
       </div>
       <div className='lg:mt-20 py-10'>
-        <FlowText text="Frontend Engineer" />
+        <FlowText text="Say Hello" />
       </div>
     </PageTransition>
   )

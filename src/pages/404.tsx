@@ -18,7 +18,7 @@ const NotFound: React.FC = () => {
                     <TextHoverEffect text='404' />
                 </div>
                 <div className='text-xl'>
-                    Hands on the keyboard man.
+                    Wrong turn. But hey, curiosity is a good sign.
                 </div>
             </div>
         </div>
