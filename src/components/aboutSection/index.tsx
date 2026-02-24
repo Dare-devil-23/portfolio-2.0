@@ -114,11 +114,11 @@ const AboutSection: React.FC<Props> = ({ onIntersect }) => {
                                             animate={{ height: 'auto', opacity: 1 }}
                                             exit={{ height: 0, opacity: 0 }}
                                             transition={{ duration: 0.3 }}
-                                            className='overflow-hidden text-base lg:text-lg text-zinc-400 mt-4 flex flex-col gap-2'
+                                            className='overflow-hidden text-base lg:text-lg text-zinc-100 mt-4 flex flex-col gap-2'
                                         >
                                             {job.bullets.map((bullet, bIndex) => (
                                                 <li key={bIndex} className='flex gap-2'>
-                                                    <span className='text-zinc-500'>&bull;</span>
+                                                    <span className='text-zinc-100'>&bull;</span>
                                                     {bullet}
                                                 </li>
                                             ))}
