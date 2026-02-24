@@ -1,32 +1,19 @@
 import React from 'react';
 import Magnetic from '@/components/common/magnetic';
-
+import { socialLinks } from '@/data/resume';
 import { motion } from 'framer-motion';
 
-const socialLinks = [
-  {
-    title: 'Github',
-    path: 'https://github.com/Dare-devil-23'
-  },
-  {
-    title: 'LinkedIn',
-    path: 'https://www.linkedin.com/in/saisahith/'
-  },
-  {
-    title: 'X (Twitter)',
-    path: 'https://twitter.com/Sahith9866'
-  }
-]
-
 const Footer: React.FC = () => {
+  const displayLinks = socialLinks.filter(l => l.title !== 'Email');
+
   return (
     <div className='relative h-[600px] lg:h-[470px] mix-blend-difference' style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}>
       <div className='relative h-[calc(100vh+600px)] lg:h-[calc(100vh+470px)] -top-[100vh]'>
         <div className='sticky top-[calc(100vh-600px)] lg:top-[calc(100vh-470px)] h-[600px] lg:h-[470px]'>
           <div className='px-5 py-8 bg-zinc-900 h-full'>
             <div className='flex gap-10 flex-col lg:flex-row'>
-              <div className='w-full h-auto max-w-[400px] lg:w-[400px] rounded-xl bg-zinc-300'>
-                <img src="/images/sahith-bg.webp" className='w-full h-full max-w-[400px]' />
+              <div className='w-full h-auto max-w-[400px] lg:w-[400px] rounded-xl bg-zinc-300 overflow-hidden'>
+                <img src="/images/sahith-bg.webp" className='w-full h-full max-w-full object-cover' />
               </div>
               <div className='flex gap-8 flex-col justify-around'>
                 <div className='flex gap-3 items-start lg:items-end justify-between lg:justify-start'>
@@ -43,7 +30,7 @@ const Footer: React.FC = () => {
                 </div>
                 <div className='flex gap-3 items-center'>
                   {
-                    socialLinks.map((item, index) => {
+                    displayLinks.map((item, index) => {
                       return (
                         <Magnetic key={index}>
                           <a target='_blank' className='text-[16px] text-zinc-200 font-medium' href={item.path}>
@@ -61,7 +48,7 @@ const Footer: React.FC = () => {
                 @sahith {new Date().getFullYear()}
               </div>
               <div>
-                Made with ❤️ by me.
+                Made with love by me.
               </div>
             </div>
           </div>

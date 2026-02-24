@@ -4,6 +4,6 @@
 
 @layer components {
   .project-title-font-size {
-    @apply font-bold text-[6vh] lg:text-[6vw] lg:leading-[6.5vw];
+    @apply font-bold text-[6vh] md:text-[4vw] md:leading-[4.5vw] lg:text-[6vw] lg:leading-[6.5vw];
   }
 }

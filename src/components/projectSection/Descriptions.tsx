@@ -32,7 +32,7 @@ const Descriptions: React.FC<Props> = ({ data, selectedProject }) => {
                             <p className='lg:hidden block uppercase project-title-font-size m-0 relative z-[2]'>
                                 {crop(title, 4)}
                             </p>
-                            <p className='w-[60%] lg:w-[40%] text-[1vh] lg:text-[1vw] font-bold'>
+                            <p className='w-[60%] lg:w-[40%] text-xs lg:text-base font-bold'>
                                 {description}
                             </p>
                         </div>

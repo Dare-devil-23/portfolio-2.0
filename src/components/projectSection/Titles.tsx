@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { useScroll, motion, useTransform, useMotionTemplate } from 'framer-motion';
+import { useScroll, motion, useTransform, useMotionTemplate } from 'framer-motion'
 import { projectsData } from '@/components/projectSection/data'
 
 interface TitleProps {
@@ -32,11 +32,13 @@ const Title: React.FC<TitleProps> = (props: TitleProps) => {
     }
 
     return (
-        <div
+        <motion.div
             ref={container}
             onMouseOver={() => setSelectedProject(index)}
             onMouseLeave={() => setSelectedProject(null)}
             className="cursor-default relative z-[3] flex"
+            whileHover={{ scale: 1.02 }}
+            transition={{ type: 'spring', stiffness: 300, damping: 20 }}
         >
             <div
                 className="inline-block pl-[10%] cursor-pointer"
@@ -53,7 +55,7 @@ const Title: React.FC<TitleProps> = (props: TitleProps) => {
                     {title}
                 </p>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

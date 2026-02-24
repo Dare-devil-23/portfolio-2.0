@@ -1,17 +1,19 @@
 import React from 'react'
 import PageTransition from '@/components/common/pageTransition';
 import HomeSection from '@/components/homeSection';
-import ProjectSection from '@/components/projectSection';
+import IntroSection from '@/components/introSection';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 const Phrase: React.FC = () => {
   return (
     <>
       <span className='pl-[12dvw]'>
-        a full stack
+        Frontend
       </span>
-      <br /> developer
-      <br /> who loves
-      <br /> design
+      <br /> Engineer
+      <br /> who builds
+      <br /> at scale
     </>
   )
 }
@@ -20,7 +22,22 @@ const Home: React.FC = () => {
   return (
     <PageTransition>
       <HomeSection heroPhrase={<Phrase />} />
-      <ProjectSection />
+      <IntroSection />
+      <div className='flex justify-center py-20'>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <Link
+            href='/work'
+            className='border-2 border-zinc-800 rounded-full px-8 py-4 text-lg font-medium hover:bg-zinc-900 hover:text-white transition-colors duration-300'
+          >
+            View my work &rarr;
+          </Link>
+        </motion.div>
+      </div>
     </PageTransition>
   )
 }

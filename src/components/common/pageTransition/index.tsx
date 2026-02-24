@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { useRouter } from 'next/router';
-import { text, curve, translate } from '@/components/common/pageTransition/varients';
+import { text, curve, translate } from '@/components/common/pageTransition/variants';
 
 interface Props {
     children: React.ReactNode

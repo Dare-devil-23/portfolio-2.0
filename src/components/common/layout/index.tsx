@@ -18,6 +18,8 @@ const Layout: React.FC<LayoutProps> = (props: LayoutProps) => {
             return 'bg-black';
         } else if(router.pathname === '/about') {
             return 'bg-[#222]';
+        } else if(router.pathname === '/work') {
+            return 'bg-white';
         }
 
         return 'bg-white';

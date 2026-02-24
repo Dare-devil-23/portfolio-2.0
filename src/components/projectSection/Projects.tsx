@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Titles from '@/components/projectSection/Titles';
-import Descriptions from '@/components/projectSection/Descritions';
+import Descriptions from '@/components/projectSection/Descriptions';
 import { projectsData } from '@/components/projectSection/data';
 
 

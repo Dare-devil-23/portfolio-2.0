@@ -1,5 +1,5 @@
 import type { AppProps } from "next/app";
-import { Metadata } from 'next';
+import Head from 'next/head';
 import Layout from "@/components/common/layout";
 import { useEffect } from "react";
 import Lenis from "lenis";
@@ -7,35 +7,40 @@ import { AnimatePresence } from "framer-motion";
 import "@/styles/globals.css";
 import "@/styles/404.css";
 
-export const metadata: Metadata = {
-  title: 'Sahith Portfolio',
-  description: 'Made with love by Sahith',
-  icons: {
-    icon: '/favicon.png',
-  },
-};
-
 const App: React.FC<AppProps> = (props: AppProps) => {
 
   const { Component, pageProps, router } = props;
 
   useEffect(() => {
     const lenis = new Lenis()
+    let rafId: number;
 
     const raf = (time: number) => {
       lenis.raf(time)
-      requestAnimationFrame(raf)
+      rafId = requestAnimationFrame(raf)
     }
 
-    requestAnimationFrame(raf)
-  })
+    rafId = requestAnimationFrame(raf)
+
+    return () => {
+      cancelAnimationFrame(rafId)
+      lenis.destroy()
+    }
+  }, [])
 
   return (
-    <Layout>
-      <AnimatePresence mode="wait">
-        <Component key={router.route} {...pageProps} />
-      </AnimatePresence>
-    </Layout>
+    <>
+      <Head>
+        <title>Sahith Portfolio</title>
+        <meta name="description" content="Made with love by Sahith" />
+        <link rel="icon" href="/favicon.png" />
+      </Head>
+      <Layout>
+        <AnimatePresence mode="wait">
+          <Component key={router.route} {...pageProps} />
+        </AnimatePresence>
+      </Layout>
+    </>
   );
 }
 
