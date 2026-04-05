@@ -34,6 +34,7 @@ const App: React.FC<AppProps> = (props: AppProps) => {
         <title>Sahith Portfolio</title>
         <meta name="description" content="Made with love by Sahith" />
         <link rel="icon" href="/favicon.png" />
+        <script src="https://pagewiz-api.onrender.com/widget/widget.js" data-api-key="pw_8b0505ab24a9260c3ad76a4c92e290683ec5bedfaf708cac" />
       </Head>
       <Layout>
         <AnimatePresence mode="wait">
