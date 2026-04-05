@@ -36,7 +36,12 @@ const App: React.FC<AppProps> = (props: AppProps) => {
         <meta name="description" content="Made with love by Sahith" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <Script src="https://pagewiz-api.onrender.com/widget/widget.js" data-api-key="pw_8b0505ab24a9260c3ad76a4c92e290683ec5bedfaf708cac" strategy="afterInteractive" />
+      <Script
+        src="https://pagewiz-api.onrender.com/widget/widget.js"
+        data-api-key="pw_8b0505ab24a9260c3ad76a4c92e290683ec5bedfaf708cac"
+        data-api-url="https://pagewiz-api.onrender.com"
+        strategy="afterInteractive"
+      />
       <Layout>
         <AnimatePresence mode="wait">
           <Component key={router.route} {...pageProps} />
