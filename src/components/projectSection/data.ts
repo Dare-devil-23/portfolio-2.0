@@ -1,5 +1,12 @@
 export const projectsData = [
     {
+        title: "PageWiz",
+        description: "AI website copilot — one script tag gives any site an intelligent assistant that guides users visually.",
+        speed: 0.5,
+        imgSrc: '/projects/pagewiz.png',
+        link: "https://pagewiz.vercel.app"
+    },
+    {
         title: "TekieHub",
         description: "A consulting hub bridging businesses with modern web solutions.",
         speed: 0.5,
@@ -12,13 +19,6 @@ export const projectsData = [
         speed: 0.5,
         imgSrc: '/projects/dizzyfit.png',
         link: "https://dizzyfit.vercel.app"
-    },
-    {
-        title: "ETracker",
-        description: "Full-stack exercise tracker on the MERN stack — log, visualize, and own your progress.",
-        speed: 0.67,
-        imgSrc: '/projects/etracker.png',
-        link: "https://exercise-tracker-by-sahith.surge.sh"
     },
     {
         title: "InvitingYou",
